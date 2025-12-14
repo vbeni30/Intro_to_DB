@@ -1,6 +1,6 @@
 -- task_3.sql
--- List all tables in the database
+-- List all tables in alx_book_store
 
-SELECT TABLE_NAME
-FROM INFORMATION_SCHEMA.TABLES
-WHERE TABLE_SCHEMA = DATABASE();
+USE alx_book_store;
+
+SHOW TABLES;
