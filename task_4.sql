@@ -1,13 +1,12 @@
 -- task_4.sql
--- Print full description of the Books table
+-- Full description of the table Books
 
-SELECT 
-    COLUMN_NAME AS 'Column Name',
-    COLUMN_TYPE AS 'Data Type',
-    IS_NULLABLE AS 'Nullable',
-    COLUMN_KEY AS 'Key',
-    COLUMN_DEFAULT AS 'Default',
-    EXTRA AS 'Extra'
+SELECT COLUMN_NAME,
+       COLUMN_TYPE,
+       IS_NULLABLE,
+       COLUMN_DEFAULT,
+       COLUMN_KEY,
+       EXTRA
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = DATABASE()
+WHERE TABLE_SCHEMA = 'alx_book_store'
   AND TABLE_NAME = 'Books';
