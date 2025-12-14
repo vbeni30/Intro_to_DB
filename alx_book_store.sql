@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS Order_Details (
     orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
     book_id INT NOT NULL,
-    quantity INT NOT NULL,
+    quantity DOUBLE NOT NULL,   -- must be DOUBLE
     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
@@ -58,4 +58,5 @@ CREATE TABLE IF NOT EXISTS Order_Details (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
+
 
